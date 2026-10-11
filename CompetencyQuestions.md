@@ -81,6 +81,8 @@
 
   37.  Which measures are stored as raw signals versus aggregated summaries? 
 
-  38.  Which measures are directly comparable across devices without transformation? 
+  38.  Which measures are directly comparable across devices without transformation?
+  39. How many sessions does each participant complete?
+ 40. How long did a participant perform a task? 
 
  
