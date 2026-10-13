@@ -23,13 +23,13 @@
 22.  What unit is a particular physiological measurement recorded in? 
 23.  Can measurements representing the same physiological concept be converted to a common unit? 
 24. Can reading from one wearable be transformed to another? 
-25. Are two measurements comparable given their units, sampling rate, sensor type, and body location? 
-26. Can the KG identify whether a measurement was directly observed, derived, converted, or imputed?
-27. Which agents have missing data for a given device or measure? 
-28. Was the device worn on the dominant or non-dominant side? 
-29.  Which measures are stored as raw signals versus aggregated summaries? 
-30.  Which measures are directly comparable across devices without transformation?
-31. How many sessions does each participant complete?
-32. How long did an agent perform a task? 
+ 
+25. Can the KG identify whether a measurement was directly observed, derived, converted, or imputed?
+26. Which agents have missing data for a given device or measure? 
+27. Was the device worn on the dominant or non-dominant side? 
+28.  Which measures are stored as raw signals versus aggregated summaries? 
+29.  Which measures are directly comparable across devices without transformation?
+30. How many sessions does each participant complete?
+31. How long did an agent perform a task? 
 
  
