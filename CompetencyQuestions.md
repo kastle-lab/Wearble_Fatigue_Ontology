@@ -18,7 +18,7 @@
 18.	What wearables did the agent wear?
 19.	What biometric properties were measured for the agent?
 20.	What properties were measured for the transportation mode?
-21.	What survey’s did the agent respond to?
+21.	How long did an agent perform a task? 
 22.	What was the agent’s survey response?
 23.	What tasks were required to meet the goal?
 24.	What was the goal of the scenario?
@@ -30,4 +30,3 @@
 30.	What was the mode of transportation?
 31.	What was the agent’s heart rate when he was fatigued?
 32.	What was the flight performance of the agent when he was fatigued?
-33.	How long did an agent perform a task? 
