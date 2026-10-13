@@ -14,7 +14,6 @@
 14.  Which measures are stored as raw signals versus aggregated summaries? 
 15.  Which measures are directly comparable across devices without transformation?
 16. How many sessions does each participant complete?
-16.. How long did an agent perform a task? 
 17.	What wearables did the agent wear?
 18.	What biometric properties were measured for the agent?
 19.	What properties were measured for the transportation mode?
@@ -30,3 +29,4 @@
 29.	What was the mode of transportation?
 30.	What was the agent’s heart rate when he was fatigued?
 31.	What was the flight performance of the agent when he was fatigued?
+32.	How long did an agent perform a task? 
