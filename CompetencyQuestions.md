@@ -1,18 +1,19 @@
-1. What physiological measures is a device capable of collecting?
-2.	 What specific questionnaire did an agent answer? 
-3.  When was the questionnaire administered relative to wearable data collection? 
-4. What was the sampling rate for a specific physiological measure? 
-5.  Can measurements with different sampling rates be standardized to a common sampling rate? 
-6.  On which body part was the wearable worn? 
-7.  What unit is a particular physiological measurement recorded in? 
-8.  Can measurements representing the same physiological concept be converted to a common unit? 
-9. Can reading from one wearable be transformed to another? 
-10. Can the KG identify whether a measurement was directly observed, derived, converted, or imputed?
-11. Which agents have missing data for a given device or measure? 
-12. Was the device worn on the dominant or non-dominant side? 
-13.  Which measures are stored as raw signals versus aggregated summaries? 
-14.  Which measures are directly comparable across devices without transformation?
-15. How many sessions does each participant complete?
+1. What measures significantly changed when fatigue was interpreted versus not?
+2. What physiological measures is a device capable of collecting?
+3.	 What specific questionnaire did an agent answer? 
+4.  When was the questionnaire administered relative to wearable data collection? 
+5. What was the sampling rate for a specific physiological measure? 
+6.  Can measurements with different sampling rates be standardized to a common sampling rate? 
+7.  On which body part was the wearable worn? 
+8.  What unit is a particular physiological measurement recorded in? 
+9.  Can measurements representing the same physiological concept be converted to a common unit? 
+10. Can reading from one wearable be transformed to another? 
+11. Can the KG identify whether a measurement was directly observed, derived, converted, or imputed?
+12. Which agents have missing data for a given device or measure? 
+13. Was the device worn on the dominant or non-dominant side? 
+14.  Which measures are stored as raw signals versus aggregated summaries? 
+15.  Which measures are directly comparable across devices without transformation?
+16. How many sessions does each participant complete?
 16.. How long did an agent perform a task? 
 17.	What wearables did the agent wear?
 18.	What biometric properties were measured for the agent?
