@@ -14,8 +14,8 @@
 13.	What was the mode of transportation?
 14.	What was the agent’s heart rate when he was fatigued?
 15.	What was the flight performance of the agent when he was fatigued?
-16.	  What physiological measures is a device capable of wearing?
-17.	 What specific questionnaire did a participant answer? 
+16.	  What physiological measures is a device capable of collecting?
+17.	 What specific questionnaire did an agent answer? 
 19.  When was the questionnaire administered relative to wearable data collection? 
 19. What was the sampling rate for a specific physiological measure? 
 20.  Can measurements with different sampling rates be standardized to a common sampling rate? 
@@ -25,11 +25,11 @@
 24. Can reading from one wearable be transformed to another? 
 25. Are two measurements comparable given their units, sampling rate, sensor type, and body location? 
 26. Can the KG identify whether a measurement was directly observed, derived, converted, or imputed?
-27. Which participants have missing data for a given device or measure? 
+27. Which agents have missing data for a given device or measure? 
 28. Was the device worn on the dominant or non-dominant side? 
 29.  Which measures are stored as raw signals versus aggregated summaries? 
 30.  Which measures are directly comparable across devices without transformation?
 31. How many sessions does each participant complete?
-32. How long did a participant perform a task? 
+32. How long did an agent perform a task? 
 
  
