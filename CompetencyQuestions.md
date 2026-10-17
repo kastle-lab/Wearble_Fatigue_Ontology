@@ -1,9 +1,9 @@
-1. What measures significantly changed when fatigue was interpreted versus not?
-2. What flight performance measures changed when fatigue was interpreted versus not?
-3. Did the agent's perceived level of fatigue increase as their perceived workload increased?
+1. What measures significantly changed when a behavioral state was interpreted versus not?
+2. What flight performance measures changed when a behavioral state was interpreted versus not?
+3. Did the agent's perceived level of behavioral state increase as their perceived workload increased?
 4. What physiological measures is a device capable of collecting?
-5.	 What specific questionnaire did an agent answer? 
-6.  When was the questionnaire administered relative to wearable data collection? 
+5.	 What specific survey did an agent answer? 
+6.  When was the survey administered relative to wearable data collection? 
 7. What was the sampling rate for a specific physiological measure? 
 8.  Can measurements with different sampling rates be standardized to a common sampling rate? 
 9.  On which body part was the wearable worn? 
@@ -17,7 +17,7 @@
 17.  Which measures are directly comparable across devices without transformation?
 18. How many sessions does each participant complete?
 19.	What wearables did the agent wear?
-20.	What biometric properties were measured for the agent?
+20.	What physiological measure properties were measured for the agent?
 21.	What properties were measured for the transportation mode?
 22.	How long did an agent perform a task? 
 23.	What was the agent’s survey response?
@@ -29,5 +29,5 @@
 29.	What was the duration of the scenario?
 30.	What is the predicted level of fatigue of the agent?
 31.	What was the mode of transportation?
-32.	What was the agent’s heart rate when he was fatigued?
-33.	What was the flight performance of the agent when he was fatigued?
+32.	What was the agent’s physiological measure when he was in a behavioral state?
+33.	What was the flight performance of the agent when he was in a behavioral state?
