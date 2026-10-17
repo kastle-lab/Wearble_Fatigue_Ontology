@@ -11,12 +11,12 @@
 11.  Can measurements representing the same physiological concept be converted to a common unit? 
 12. Can reading from one wearable be transformed to another? 
 13. Can the KG identify whether a measurement was directly observed, derived, converted, or imputed?
-14. Which agents have missing data for a given device or measure? 
-15. Was the device worn on the dominant or non-dominant side? 
+14. Which agents have missing data for a given wearable or measure? 
+15. Was the wearable worn on the dominant or non-dominant side? 
 16.  Which measures are stored as raw signals versus aggregated summaries? 
-17.  Which measures are directly comparable across devices without transformation?
-18. How many sessions does each participant complete?
-19.	What wearables did the agent wear?
+17.  Which measures are directly comparable across wearable without transformation?
+18. How many sessions does each agent complete?
+19.	What wearable did the agent wear?
 20.	What physiological measure properties were measured for the agent?
 21.	What properties were measured for the transportation mode?
 22.	How long did an agent perform a task? 
@@ -27,7 +27,7 @@
 27.	What was the observed airspeed?
 28.	What is the agent’s role?
 29.	What was the duration of the scenario?
-30.	What is the predicted level of fatigue of the agent?
+30.	What is the predicted level of behavioral state of the agent?
 31.	What was the mode of transportation?
 32.	What was the agent’s physiological measure when he was in a behavioral state?
 33.	What was the flight performance of the agent when he was in a behavioral state?
