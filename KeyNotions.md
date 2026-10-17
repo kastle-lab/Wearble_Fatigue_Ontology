@@ -21,3 +21,5 @@
      * Rationale: A period of data collection for a participant.
 * Task
    * Rationale : Activity performed by a participant. (Games, Flight)
+* Measurement
+  * Rationale : Observation made from Sensor
