@@ -18,16 +18,17 @@
 18. How many sessions does each agent complete?
 19.	What wearable did the agent wear?
 20.	What physiological measure properties were measured for the agent?
-21.	What properties were measured for the transportation mode?
-22.	How long did an agent perform a task? 
-23.	What was the agent’s survey response?
-24.	What tasks were required to meet the goal?
-25.	What was the goal of the scenario?
-26.	What type of vehicle is the agent operating?
-27.	What was the observed airspeed?
-28.	What is the agent’s role?
-29.	What was the duration of the scenario?
-30.	What is the predicted level of behavioral state of the agent?
-31.	What was the mode of transportation?
-32.	What was the agent’s physiological measure when he was in a behavioral state?
-33.	What was the flight performance of the agent when he was in a behavioral state?
+21.	What performance measures were measured for a task?
+22.	What properties were measured for the transportation mode? - DELETE THIS QUESTION AND REPLACE WITH ABOVE
+23.	How long did an agent perform a task? 
+24.	What was the agent’s survey response?
+25.	What tasks were required to meet the goal?
+26.	What was the goal of the scenario?
+27.	What type of vehicle is the agent operating? - DELETE or REWORD
+28.	What was the observed airspeed?
+29.	What is the agent’s role?
+30.	What was the duration of the scenario?
+31.	What is the predicted level of behavioral state of the agent?
+32.	What was the mode of transportation? - DELETE or REWORD
+33.	What was the agent’s physiological measure when he was in a behavioral state?
+34.	What was the flight??? performance of the agent when he was in a behavioral state?
