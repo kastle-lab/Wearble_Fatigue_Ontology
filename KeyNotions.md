@@ -29,3 +29,14 @@
      
 * Measurement
   * Rationale : Observation made from Sensor
+ 
+* Goal
+  * Rationale : Ultimate outcome of all tasks performed.
+ 
+* Role
+  * Rationale : Agent's title while performing a task.
+ 
+
+
+ 
+
