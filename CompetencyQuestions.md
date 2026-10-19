@@ -1,6 +1,6 @@
 1. What measurements significantly changed when a behavioral state was interpreted versus not?
-2. What flight performance measurements changed when a behavioral state was interpreted versus not?
-3. Did the agent's perceived level of behavioral state increase as their perceived workload increased?
+2. What flight??? performance measurements changed when a behavioral state was interpreted versus not?
+3. Did the agent's perceived level of behavioral state increase???(maybe change is better???) as their perceived workload increased?
 4. What physiological measures is a device capable of collecting?
 5.	 What specific survey did an agent answer? 
 6.  When was the survey administered relative to wearable data collection? 
@@ -10,7 +10,7 @@
 10.  What unit is a particular physiological measurement recorded in? 
 11.  Can measurements representing the same physiological concept be converted to a common unit? 
 12. Can measurement from one wearable be transformed to another? 
-13. Can the KG identify whether a measurement was directly observed, derived, converted, or imputed?
+13. Can the KG???(is KG supposed to be referenced in the competency questions) identify whether a measurement was directly observed, derived, converted, or imputed?
 14. Which agents have missing data for a given wearable or physiological measurement? 
 15. Was the wearable worn on the dominant or non-dominant side? 
 16.  Which measurements are stored as raw signals versus aggregated summaries? 
