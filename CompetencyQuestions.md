@@ -1,12 +1,12 @@
 1. What measurements significantly changed when a behavioral state was interpreted versus not?
-2. What flight??? performance measurements changed when a behavioral state was interpreted versus not?
-3. Did the agent's perceived level of behavioral state increase???(maybe change is better???) as their perceived workload increased?
+2. What performance measurements changed when a behavioral state was interpreted versus not?
+3. Did the agent's perceived level of behavioral state change as their perceived workload increased?
 4. What physiological measures is a device capable of collecting?
-5.	 What specific survey did an agent answer? 
-6.  When was the survey administered relative to wearable data collection? 
-7. What was the sampling rate for a specific physiological measure? 
-8.  Can measurements with different sampling rates be standardized to a common sampling rate? 
-9.  On which body part was the wearable worn? DOES THIS NEED TO BE ADDED TO KEY NOTIONS?
+5. What specific survey(s) did an agent answer?
+6. When was the survey administered relative the tasks? 
+7. What was the sampling rate for a specific physiological measure?
+8. Can measurements with different sampling rates be standardized to a common sampling rate?
+9. On which body part was the wearable worn? DOES THIS NEED TO BE ADDED TO KEY NOTIONS?
 10.  What unit is a particular physiological measurement recorded in? 
 11.  Can measurements representing the same physiological concept be converted to a common unit? 
 12. Can measurement from one wearable be transformed to another? 
