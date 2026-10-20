@@ -10,21 +10,21 @@
 10. What unit is a particular physiological measurement recorded in?
 11. Can measurements representing the same physiological concept be converted to a common unit? 
 12. Can measurement from one wearable be transformed to another? 
-14. Which agents have missing data for a given wearable or physiological measurement? 
-15. Was the wearable worn on the dominant or non-dominant side?
-16. Which measurements are stored as raw signals versus aggregated summaries? 
-17. Which physiological measurements are directly comparable across wearables without transformation?
-18. How many sessions does each agent complete?
-19.	What wearable(s) did the agent wear?
-20.	What physiological measurements were measured for the agent?
-21.	What performance measures were measured for a task?
-23.	What was the duration of the task performed by the agent? 
-24.	What was the agent’s survey response?
-25.	What tasks were required to meet the goal?
-26.	What was the goal of the task?
-27.	What is the equipment associated with the task?
-29.	What is the agent’s role?
-33.	What was the agent’s physiological measure when he was in a behavioral state?
+13. Which agents have missing data for a given wearable or physiological measurement? 
+14. Was the wearable worn on the dominant or non-dominant side?
+15. Which measurements are stored as raw signals versus aggregated summaries? 
+16. Which physiological measurements are directly comparable across wearables without transformation?
+17. How many sessions does each agent complete?
+18.	What wearable(s) did the agent wear?
+19.	What physiological measurements were measured for the agent?
+20.	What performance measures were measured for a task?
+21.	What was the duration of the task performed by the agent? 
+22.	What was the agent’s survey response?
+23.	What tasks were required to meet the goal?
+24.	What was the goal of the task?
+25.	What is the equipment associated with the task?
+26.	What is the agent’s role?
+27.	What was the agent’s physiological measure when he was in a behavioral state?
 
 
 
