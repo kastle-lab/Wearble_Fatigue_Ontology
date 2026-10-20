@@ -35,6 +35,9 @@
  
 * Role
   * Rationale : Agent's title while performing a task.
+    
+* Wear Location
+  * Rationale : Identify the location where we wear the wearable device.
  
 
 
