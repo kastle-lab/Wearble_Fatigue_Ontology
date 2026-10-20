@@ -23,9 +23,10 @@
        
 * Session
      * Rationale: A period of data collection for a participant.
-       
+* Scenario
+    * Rationale : Exercise being performed to measure behavioral state. (Playing games, Flight)
 * Task
-   * Rationale : Activity performed by a participant. (Games, Flight, Drive)
+   * Rationale : Activity performed by a participant for a scenario. (Chess, Flight take off, Drive)
      
 * Measurement
   * Rationale : Observation made from Sensor
