@@ -38,7 +38,9 @@
     
 * Wear Location
   * Rationale : Identify the location where we wear the wearable device.
- 
+    
+* Equipemnt
+  * Rationale : Machinery used to perform the task. (Plane, Race car, Computer)
 
 
  
