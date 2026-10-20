@@ -24,8 +24,11 @@
 26.	What was the goal of the task?
 27.	What is the equipment associated with the task?
 29.	What is the agent’s role?
-31.	What is the predicted level of behavioral state of the agent? - ADD TO KEY NOTION OR GET RID OF LEVEL CONCEPT
-32.	What was the mode of transportation? - DELETE or REWORD
 33.	What was the agent’s physiological measure when he was in a behavioral state?
-34.	What was the flight??? performance of the agent when he was in a behavioral state? - SHOULD FLIGHT BE KEPT?
+
+
+
+
+
 22.	What properties were measured for the transportation mode? - DELETE THIS QUESTION AND REPLACE WITH ABOVE
+32.	What was the mode of transportation? - DELETE or REWORD
