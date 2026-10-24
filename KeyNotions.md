@@ -3,11 +3,11 @@
 * Agent
    * Rationale: The Person taking part in the study. 
     
-* Physiological Measure
-   * Rationale: Type of physiological phenomenon being measured. (Heart Rate, Respiratory Rate etc.)
+* ~~Physiological Measure~~
+   * ~~Rationale: Type of physiological phenomenon being measured. (Heart Rate, Respiratory Rate etc.)~~
  
-* Performance Measure
-   * Rationale: Type of performance phenomenon being measured. (Altitude, Speed, Direction etc.)
+* ~~Performance Measure~~
+   *~~Rationale: Type of performance phenomenon being measured. (Altitude, Speed, Direction etc.)~~
   
 * Behavioral State
   * Rationale: State experienced/observed during a session/task. (Flow, Fatigue)
@@ -39,7 +39,7 @@
 * Wear Location
   * Rationale : Identify the location where we wear the wearable device.
     
-* Equipemnt
+* Equipment
   * Rationale : Machinery used to perform the task. (Plane, Race car, Computer)
 
 
