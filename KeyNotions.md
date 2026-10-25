@@ -32,6 +32,7 @@
 
 * Task
    * Rationale : Activity performed by a participant. (Playing games, Flights, Drive)
+   * Connected Pattern :Activity https://odpa.github.io/patterns-repository/An_Ontology_Design_Pattern_for_Activity_Reasoning/An_Ontology_Design_Pattern_for_Activity_Reasoning?
      
 * Measurement
   * Rationale : Observation made from Sensor
@@ -39,6 +40,7 @@
  
 * Goal
   * Rationale : Ultimate outcome of all tasks performed.
+  * Connected Pattern : Goal -Task https://github.com/kastle-lab/Autonomous-Robotic-Orchestration-Modular-Ontology/blob/master/deliverables/patterns/goal-task-pattern/goal-task-pattern.pdf
  
 * Role
   * Rationale : Agent's title while performing a task.
