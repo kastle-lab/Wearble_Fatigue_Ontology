@@ -25,3 +25,7 @@ domain: `answers some owl:Thing SubClassOf Response` <br />
 global range: `owl:Thing SubClassOf answers only SurveyItem` <br />
 
 funcationality: `Response SubClassOf answers exactly 1 SurveyITem` <br />
+
+
+## Instrumentation
+![Instrumentation module schema](../Schema/Instrumentation.jpg)
