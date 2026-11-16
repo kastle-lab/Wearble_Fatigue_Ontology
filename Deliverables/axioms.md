@@ -65,3 +65,15 @@ Anything a Task requires must be Equipment.
 
 * Structural Tautology: `Task SuClassOf requiresEquipment min 0 Equipment` <br />
 A Task may require zero or more Equipment.
+
+#### Wearable isLocated Location
+
+* disjoint: `Wearble DisjointWith Location`
+  Nothing can be a wearable and a boyd part(location).
+* Scoped domain: `isLocated some Location SubClassOf Wearable` <br />
+  Anything located at a body location must be a wearable.
+* Scoped range: `Wearable SubClassOf isLocated only Location` <br />
+  Anything a wearable is located at must be a body location.
+* Existential : `Wearable SubClassOf isLocated some Location` <br />
+  Every wearable is located at at least one body location.
+
