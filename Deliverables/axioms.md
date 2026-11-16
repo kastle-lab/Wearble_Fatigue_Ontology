@@ -68,7 +68,7 @@ A Task may require zero or more Equipment.
 
 #### Wearable isLocated Location
 
-* disjoint: `Wearble DisjointWith Location`
+* disjoint: `Wearble DisjointWith Location` <br />
   Nothing can be a wearable and a boyd part(location).
 * Scoped domain: `isLocated some Location SubClassOf Wearable` <br />
   Anything located at a body location must be a wearable.
@@ -77,3 +77,25 @@ A Task may require zero or more Equipment.
 * Existential : `Wearable SubClassOf isLocated some Location` <br />
   Every wearable is located at at least one body location.
 
+## Behavior Assessment
+![Behavior Assessment module schema](../Schema/Behavior_Assessment.jpg)
+### Axioms
+#### Actor exhibits Behavior
+* Disjoint: `Actor DisjointWith Behavior` <br />
+  Nothing can be both an actor and a behavior.
+* Scoped domain: `exhibits some Behavior SubClassOf Actor` <br />
+  Anything that exhibits a behavior must be an actor.
+* Scoped range: `Actor SubClassOf exhibits only Behavior` <br />
+  Anything an actor exhibits must be a behavior.
+* Structural tautology: `Actor SubClassOf exhibits min 0 Behavior` <br />
+  An actor may exhibit zero or more behaviors.
+* Existential: Behavior SubClassOf exhibits some Actor <br />
+  Every behavior is exhibited by at least one actor.
+  
+#### Observation informs Interpretation
+* Scoped domain: `informs some Behavior SubClassOf Interpretation` <br />
+  Anything that informs a behavior is an observation or an behavior or interpretation.
+* Scoped range: `Observation SubClassOf informs only Interpretation` <br />
+  Anything an observation informs must be a behavior or an interpretation.
+* Structural tautology: `Observation SubClassOf informs min 0 Behavior`<br />
+  An observation may inform zero or more behaviors.
