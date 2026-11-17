@@ -145,3 +145,32 @@ A Task may require zero or more Equipment.
   Anything an observation is about must be a feature of interest.
 * Existential: `Observation SubClassOf hasFeatureOfInterest some FeatureOfInterest` <br />
   Every observation is about at least one thing.
+  
+#### Goal scopedBy Task
+* Disjoint: `Goal DisjointWith Task` <br />
+  Nothing can be both a task and a goal.
+* Scoped domain: `scoped by some tasks SubClassOf Goal` <br />
+  Anything scoped by tasks must have a goal.
+* Scoped range: `Goal SubClassOf scoped by only Tasks` <br />
+  Any goal scope must be a task.
+* Structural tautology: `Goal SubClassOf scoped by min 0 Tasks` <br />
+  A goal may be scoped by zero or more tasks.
+
+#### Scenario hasGoal Goal
+* Disjoint: `Scenario DisjointWith Goal` <br />
+  Nothing can be both a scenario and a goal.
+* Scoped domain: `has some goals SubClassOf Scenario` <br />
+  Anything that has a goal must have a scenario.
+* Structural tautology: `Scenario SubClassOf scoped by min 0 Goals` <br />
+  A scenario may be have zero or more goals. 
+  
+#### Scenario providesRole Role
+* Disjoint: `Scenario DisjointWith Role` <br />
+  Nothing can be both a scenario and a role.
+* Scoped domain: `has some roles SubClassOf Scenario` <br />
+  Anything that has a role must have a scenario.
+* Structural tautology: `Scenario SubClassOf has min 0 Roles` <br />
+  A scenario may be have zero or more roles.
+
+  
+
