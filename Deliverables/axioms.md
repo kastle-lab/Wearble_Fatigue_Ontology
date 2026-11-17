@@ -116,8 +116,31 @@ A Task may require zero or more Equipment.
 
 ### Axioms
 #### Agent madeObservation Observation
+* Disjoint: `Agent DisjointWith Observation` <br />
+  Nothing can be both an agent and an observation.
+* domain: `madeObservation some owl:Thing SubClassOf Agent` <br />
+  Anything that made an observation must be an agent.
+* Range: owl: `Thing SubClassOf madeObservation only Observation` <br />
+  Whatever anything made must be an observation.
+* Structural tautology: `Agent SubClassOf madeObservation min 0 Observation` <br />
+  An agent may make zero or more observations.
 
 #### Observation hasResult Result
-
+* Disjoint: `Observation DisjointWith Result` <br />
+  Nothing can be both an observation and a result.
+* Domain: `hasResult owl:Thing SubClassOf Observation` <br/>
+  Anything that has a result must be an observation.
+* Range: `owl:Thing SubClassOf hasResult only Result` <br/>
+  Anything an observation has as a result must be a result.
+* Existential: `Observation SubClassOf hasResult some Resul` <br /> 
+  Every observation has a result.
+  
 #### Observation hasFeatureOfInterest FeatureOfInterest
-
+* Disjoint:  `Observation DisjointWith FeatureOfInterest` <br />
+  Nothing can be both an observation and the thing it’s about.
+* Scoped domain:  `hasFeatureOfInterest some FeatureOfInterest SubClassOf Observation` <br/>
+  Anything that has a feature of interest must be an observation.
+* Scoped range: `Observation SubClassOf hasFeatureOfInterest only FeatureOfInterest` <br/>
+  Anything an observation is about must be a feature of interest.
+* Existential: `Observation SubClassOf hasFeatureOfInterest some FeatureOfInterest` <br />
+  Every observation is about at least one thing.
