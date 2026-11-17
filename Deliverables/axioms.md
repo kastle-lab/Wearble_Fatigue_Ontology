@@ -168,7 +168,7 @@ A Task may require zero or more Equipment.
 * Scoped domain: `has some goals SubClassOf Scenario` <br />
   Anything that has a goal must have a scenario.
 * Structural tautology: `Scenario SubClassOf scoped by min 0 Goals` <br />
-  A scenario may be have zero or more goals. 
+  A scenario may have zero or more goals. 
   
 #### Scenario providesRole Role
 * Disjoint: `Scenario DisjointWith Role` <br />
