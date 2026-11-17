@@ -161,6 +161,8 @@ A Task may require zero or more Equipment.
   Every goal has at least one task.
 * Structural tautology: `Goal SubClassOf scopedBy min 0 Task` <br />
   A goal may be scoped by zero or more tasks.
+* Qualified Scoped Funcationality: `Goal SubClassOf scopedBy min 1 Task` <br />
+  Goal has atleast one Task
 
 #### Scenario hasGoal Goal
 * Disjoint: `Scenario DisjointWith Goal` <br />
