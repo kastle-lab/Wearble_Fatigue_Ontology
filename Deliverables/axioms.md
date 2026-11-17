@@ -133,7 +133,7 @@ A Task may require zero or more Equipment.
   Anything that has a result must be an observation.
 * Range: `owl:Thing SubClassOf hasResult only Result` <br/>
   Anything an observation has as a result must be a result.
-* Existential: `Observation SubClassOf hasResult some Resul` <br /> 
+* Existential: `Observation SubClassOf hasResult some Result` <br /> 
   Every observation has a result.
   
 #### Observation hasFeatureOfInterest FeatureOfInterest
@@ -153,30 +153,30 @@ A Task may require zero or more Equipment.
 #### Goal scopedBy Task
 * Disjoint: `Goal DisjointWith Task` <br />
   Nothing can be both a task and a goal.
-* Scoped domain: `scoped by some tasks SubClassOf Goal` <br />
+* Scoped domain: `scopedBy some Task SubClassOf Goal` <br />
   Anything scoped by tasks must have a goal.
-* Scoped range: `Goal SubClassOf scoped by only Tasks` <br />
+* Scoped range: `Goal SubClassOf scopedBy only Tasks` <br />
   Any goal scope must be a task.
 * Existential: `Goal SubClassOf scopedBy some Task` <br />
   Every goal has at least one task.
-* Structural tautology: `Goal SubClassOf scoped by min 0 Tasks` <br />
+* Structural tautology: `Goal SubClassOf scopedBy min 0 Task` <br />
   A goal may be scoped by zero or more tasks.
 
 #### Scenario hasGoal Goal
 * Disjoint: `Scenario DisjointWith Goal` <br />
   Nothing can be both a scenario and a goal.
-* Scoped domain: `has some goals SubClassOf Scenario` <br />
+* Scoped domain: `hasGoal some Goal SubClassOf Scenario` <br />
   Anything that has a goal must have a scenario.
-* Structural tautology: `Scenario SubClassOf scoped by min 0 Goals` <br />
+* Structural tautology: `Scenario SubClassOf scopedBy min 0 Goal` <br />
   A scenario may have zero or more goals. 
   
 #### Scenario providesRole Role
 * Disjoint: `Scenario DisjointWith Role` <br />
   Nothing can be both a scenario and a role.
-* Scoped domain: `has some roles SubClassOf Scenario` <br />
+* Scoped domain: `providesRole some Role SubClassOf Scenario` <br />
   Anything that has a role must have a scenario.
-* Structural tautology: `Scenario SubClassOf has min 0 Roles` <br />
-  A scenario may be have zero or more roles.
+* Structural tautology: `Scenario SubClassOf providesRole min 0 Role` <br />
+  A scenario may have zero or more roles.
 
   
 
