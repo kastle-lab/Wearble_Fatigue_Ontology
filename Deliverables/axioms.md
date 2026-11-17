@@ -113,6 +113,7 @@ A Task may require zero or more Equipment.
  Every interpretation is judged against at least one expectation.
 
 ## Observation
+![Observation module schema](../Schema/Observation.jpg)
 
 ### Axioms
 #### Agent madeObservation Observation
