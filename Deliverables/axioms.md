@@ -153,6 +153,8 @@ A Task may require zero or more Equipment.
   Anything scoped by tasks must have a goal.
 * Scoped range: `Goal SubClassOf scoped by only Tasks` <br />
   Any goal scope must be a task.
+* Existential: `Goal SubClassOf scopedBy some Task` <br />
+  Every goal has at least one task.
 * Structural tautology: `Goal SubClassOf scoped by min 0 Tasks` <br />
   A goal may be scoped by zero or more tasks.
 
