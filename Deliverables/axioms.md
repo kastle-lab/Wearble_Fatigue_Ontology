@@ -99,3 +99,25 @@ A Task may require zero or more Equipment.
   Anything an observation informs must be a behavior or an interpretation.
 * Structural tautology: `Observation SubClassOf informs min 0 Behavior`<br />
   An observation may inform zero or more behaviors.
+
+#### Expectation determines Interpretation
+* Disjoint: `Expectation DisjointWith Interpretation` <br/>
+  Nothing can be both an expectation and an interpretation.
+* Scoped domain: `determines some Interpretation SubClassOf Expectation` <br/>
+  Anything that determines an interpretation must be an expectation.
+* Scoped range: `Expectation SubClassOf determines only Interpretation` <br />
+  Anything an expectation determines must be an interpretation.
+* Structural tautology: `Expectation SubClassOf determines min 0 Interpretation` <br />
+  An expectation may determine zero or more interpretations.
+* Existential: `Interpretation SubClassOf inverse(determines) some Expectation` <br />
+ Every interpretation is judged against at least one expectation.
+
+## Observation
+
+### Axioms
+#### Agent madeObservation Observation
+
+#### Observation hasResult Result
+
+#### Observation hasFeatureOfInterest FeatureOfInterest
+
