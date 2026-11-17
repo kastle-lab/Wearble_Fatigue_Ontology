@@ -148,7 +148,8 @@ A Task may require zero or more Equipment.
 
 ## Goal-Task
 ![Goal-Task module schema](../Schema/Goal-Task.jpg)
-  
+
+### Axioms  
 #### Goal scopedBy Task
 * Disjoint: `Goal DisjointWith Task` <br />
   Nothing can be both a task and a goal.
