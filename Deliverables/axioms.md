@@ -145,6 +145,9 @@ A Task may require zero or more Equipment.
   Anything an observation is about must be a feature of interest.
 * Existential: `Observation SubClassOf hasFeatureOfInterest some FeatureOfInterest` <br />
   Every observation is about at least one thing.
+
+## Goal-Task
+![Goal-Task module schema](../Schema/Goal-Task.jpg)
   
 #### Goal scopedBy Task
 * Disjoint: `Goal DisjointWith Task` <br />
