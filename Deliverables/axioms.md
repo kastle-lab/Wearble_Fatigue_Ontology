@@ -82,7 +82,7 @@
 
 #### Wearable isLocated Location
 
-* disjoint: `Wearble DisjointWith Location` <br />
+* disjoint: `Wearable DisjointWith Location` <br />
   Nothing can be a wearable and a body part(location).
   
 * Scoped domain: `isLocated some Location SubClassOf Wearable` <br />
@@ -102,68 +102,103 @@
 #### Actor exhibits Behavior
 * Disjoint: `Actor DisjointWith Behavior` <br />
   Nothing can be both an actor and a behavior.
+  
 * Scoped domain: `exhibits some Behavior SubClassOf Actor` <br />
   Anything that exhibits a behavior must be an actor.
+  
 * Scoped range: `Actor SubClassOf exhibits only Behavior` <br />
   Anything an actor exhibits must be a behavior.
+  
 * Structural tautology: `Actor SubClassOf exhibits min 0 Behavior` <br />
   An actor may exhibit zero or more behaviors.
-* Existential: Behavior SubClassOf exhibits some Actor <br />
+  
+* Inverse Qualified Scoped Functionality: `Behavior SubClassOf inverse exhibits min 1 Actor` <br />
   Every behavior is exhibited by at least one actor.
   
 #### Observation informs Interpretation
-* Scoped domain: `informs some Behavior SubClassOf Interpretation` <br />
+* Scoped domain: `informs some Interpretation SubClassOf Observation` <br />
   Anything that informs a behavior is an observation or an behavior or interpretation.
+  
 * Scoped range: `Observation SubClassOf informs only Interpretation` <br />
   Anything an observation informs must be a behavior or an interpretation.
+
+* Inverse Qualified Scoped Functionality: `Interpretation SubClassOf inverse informs min 1 Observation` <br />
+  
 * Structural tautology: `Observation SubClassOf informs min 0 Behavior`<br />
   An observation may inform zero or more behaviors.
 
 #### Expectation determines Interpretation
 * Disjoint: `Expectation DisjointWith Interpretation` <br/>
   Nothing can be both an expectation and an interpretation.
+  
 * Scoped domain: `determines some Interpretation SubClassOf Expectation` <br/>
   Anything that determines an interpretation must be an expectation.
+  
 * Scoped range: `Expectation SubClassOf determines only Interpretation` <br />
   Anything an expectation determines must be an interpretation.
+  
 * Structural tautology: `Expectation SubClassOf determines min 0 Interpretation` <br />
   An expectation may determine zero or more interpretations.
-* Existential: `Interpretation SubClassOf inverse(determines) some Expectation` <br />
+  
+* Inverse Existential: `Interpretation SubClassOf inverse determines some Expectation` <br />
  Every interpretation is judged against at least one expectation.
 
 ## Observation
-![Observation module schema](../Schema/Observation.jpg)
+![Observation module schema](../schema-diagrams/Observation/Observation.jpg)
 
 ### Axioms
 #### Agent madeObservation Observation
 * Disjoint: `Agent DisjointWith Observation` <br />
   Nothing can be both an agent and an observation.
-* domain: `madeObservation some owl:Thing SubClassOf Agent` <br />
+  
+* domain: `madeObservation some Observation SubClassOf Agent` <br />
   Anything that made an observation must be an agent.
-* Range: owl: `Thing SubClassOf madeObservation only Observation` <br />
+  
+* Range: `Agent SubClassOf madeObservation only Observation` <br />
   Whatever anything made must be an observation.
+  
+* Inverse Qualified Scoped Functionality: `Observation SubClassOf inverse madeObservation exactly 1 Agent` <br />
+
 * Structural tautology: `Agent SubClassOf madeObservation min 0 Observation` <br />
   An agent may make zero or more observations.
 
 #### Observation hasResult Result
 * Disjoint: `Observation DisjointWith Result` <br />
   Nothing can be both an observation and a result.
-* Domain: `hasResult owl:Thing SubClassOf Observation` <br/>
+  
+* Scoped Domain: `hasResult some Result SubClassOf Observation` <br/>
   Anything that has a result must be an observation.
-* Range: `owl:Thing SubClassOf hasResult only Result` <br/>
+  
+* Scoped Range: `Observation SubClassOf hasResult only Result` <br/>
   Anything an observation has as a result must be a result.
+  
 * Existential: `Observation SubClassOf hasResult some Result` <br /> 
   Every observation has a result.
   
+* Inverse Existential: `Result SubClassOf inverse hasResult some Observation` <br />
+
+* Qualified Scoped Functionality: `Observation SubClassOf hasResult min 1 Result` <br />
+
+* Inverse Qualified Scoped Functionality: `Result SubClassOf inverse hasResult exactly 1 Observation` <br />
+
+  
 #### Observation hasFeatureOfInterest FeatureOfInterest
+
 * Disjoint:  `Observation DisjointWith FeatureOfInterest` <br />
   Nothing can be both an observation and the thing it’s about.
+  
 * Scoped domain:  `hasFeatureOfInterest some FeatureOfInterest SubClassOf Observation` <br/>
   Anything that has a feature of interest must be an observation.
+  
 * Scoped range: `Observation SubClassOf hasFeatureOfInterest only FeatureOfInterest` <br/>
   Anything an observation is about must be a feature of interest.
+  
 * Existential: `Observation SubClassOf hasFeatureOfInterest some FeatureOfInterest` <br />
   Every observation is about at least one thing.
+
+* Qualified Scoped Functionality: `Observation SubClassOf hasFeatureOfInterest exactly 1 FeatureOfInterest` <br /> 
+
+#### Observation observedProperty ObservableProperty
 
 ## Goal-Task
 ![Goal-Task module schema](../Schema/Goal-Task.jpg)
