@@ -199,6 +199,15 @@
 * Qualified Scoped Functionality: `Observation SubClassOf hasFeatureOfInterest exactly 1 FeatureOfInterest` <br /> 
 
 #### Observation observedProperty ObservableProperty
+* Disjoint: `Observation DisjointWith ObservableProperty` <br />
+
+* Scoped Domain: `ObservedProperty some ObservableProperty SubClassOf Observation` <br />
+
+* Scoped Range: `Observation SubClassOf observedProperty only ObservableProperty` <br/>
+
+* Existential: `Observation SubClassOf observedProperty some ObservableProperty` <br />
+
+* Qualified Scoped Functionality: `Observation SubClassOf observedProperty exactly 1 ObservableProperty` <br /> 
 
 ## Goal-Task
 ![Goal-Task module schema](../Schema/Goal-Task.jpg)
