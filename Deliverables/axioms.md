@@ -1,7 +1,7 @@
 # BIO - Behavior Interpretation Ontology
 
 ## Survey
-![Survey module schema](../Schema/Survey.jpg)
+![Survey module schema](../schema-diagrams/Survey/Survey.jpg)
 
 ### Axioms
 
@@ -9,76 +9,95 @@
 
 * disjoint: `Survey DisjointWith SurveyItem`
 
-* domain: `hasItem some owl:Thing SubClassOf Survey` <br />
+* scoped domain: `hasItem some SurveyItem SubClassOf Survey` <br />
 
-* global range: `owl:Thing SubClassOf hasItem only SurveyItem` <br />
+* Scoped range: `Survey SubClassOf hasItem only SurveyItem` <br />
 
-* Qualified Scoped Funcationality: `Survey SubClassOf hasItem min 1 SurveyITem` <br />
-Survey has atleast one SurveyItem
+* Existential : `Survey SubClassOf hasItem some SurveyItem` <br/>
+
+* Qualified Scoped Funcationality: `Survey SubClassOf hasItem min 1 SurveyItem` <br />
+  Survey has atleast one SurveyItem
 
 #### Response answers SurveyItem <br />
 
-* disjoint: `Response DisjointWith SurveyItem`
-Nothing can be Response and a Survey question.
-* domain: `answers some owl:Thing SubClassOf Response` <br />
+* disjoint: `Response DisjointWith SurveyItem` <br />
+  Nothing can be Response and a Survey question.
+  
+* Scoped domain: `answers some SurveyItem SubClassOf Response` <br />
 
-* global range: `owl:Thing SubClassOf answers only SurveyItem` <br />
+* Scoped range: `Response SubClassOf answers only SurveyItem` <br />
 
-* funcationality: `Response SubClassOf answers exactly 1 SurveyITem` <br />
-Each response answers exactly one Survey question.
+* Existential: `Response SubclassOf answers some SurveyItem` <br />
+
+* Inverse Existential: `SurveyItem SubClassOf inverse answers some Response` <br />
+
+* Functionality: `Response SubClassOf answers min 1 SurveyItem` <br />
+  Each response answers min one Survey question.
+  
+*Inverse Qualified Scoped Functionality: `SurveyItem SubClassOf inverse answers exactly 1 Response` <br /> 
 
 #### Actor takesSurvey Survey <br />
 
 * disjoint : `Actor DisjointWith Survey`
 
-* scoped domain: `takesSurvey some Agent subclassOf Survey` <br />
+* scoped domain: `takesSurvey some Survey subclassOf Actor` <br />
 
-* global range: `owl:Thing subClassOf takesSurvey only Survey` <br />
+* Scoped range: `Actor subClassOf takesSurvey only Survey` <br />
+
+* Inverse Existential : `Survey SubClassOf Inverse answers some Actor` <br/>
 
 * Structural Tautology: `Actor subClassOf takesSurvey min 0 Survey` <br />
-An Actor may take zero or more Survey.
+  An Actor may take zero or more Survey.
 
 ## Instrumentation
-![Instrumentation module schema](../Schema/Instrumentation.jpg)
+![Instrumentation module schema](../schema-diagrams/Instrumentation/Instrumentation.jpg)
 
 ### Axioms 
 #### Actor wears Wearable <br />
 
-* disjoint: `Actor DisjointWith Wearable`
+* disjoint: `Actor DisjointWith Wearable` <br />
 
 * scoped domain: `wears some Wearable SubClassOf Actor` <br />
 
 * scoped range: `Actor SubClassOf wears only Wearable` <br />
 
-* Structural Tautology: `Actor SuClassOf wears min 0 Wearable` <br />
-An Actor may wear zero or more Wearables.
+* Inverse Existential: `Wearable subClassOf inverse wears some Actor` <br />
+
+* Structural Tautology: `Actor SubClassOf wears min 0 Wearable` <br />
+  An Actor may wear zero or more Wearables.
+  
 
 #### Task requiresEquipment Equipment
 
-* disjoint: `Task  DisjointWith Equipment`
-Nothing can be both a Task and a piece of Equipment.
+* disjoint: `Task  DisjointWith Equipment` <br />
+  Nothing can be both a Task and a piece of Equipment.
 
 * scoped domain: `requiresEquipment some Equipment SubClassOf Task` <br />
 
 * scoped range: `Task SubClassOf requiresEquipment only Equipment` <br />
-Anything a Task requires must be Equipment.
+  Anything a Task requires must be Equipment.
 
-* Structural Tautology: `Task SuClassOf requiresEquipment min 0 Equipment` <br />
-A Task may require zero or more Equipment.
+* Structural Tautology: `Task SubClassOf requiresEquipment min 0 Equipment` <br />
+  A Task may require zero or more Equipment.
 
 #### Wearable isLocated Location
 
 * disjoint: `Wearble DisjointWith Location` <br />
-  Nothing can be a wearable and a boyd part(location).
+  Nothing can be a wearable and a body part(location).
+  
 * Scoped domain: `isLocated some Location SubClassOf Wearable` <br />
   Anything located at a body location must be a wearable.
+  
 * Scoped range: `Wearable SubClassOf isLocated only Location` <br />
   Anything a wearable is located at must be a body location.
+  
 * Existential : `Wearable SubClassOf isLocated some Location` <br />
   Every wearable is located at at least one body location.
+  
+* Qualified Scoped Functionality: `Wearable SubClassOf isLocated min 1 Location` <br />
 
 ## Behavior Assessment
-![Behavior Assessment module schema](../Schema/Behavior_Assessment.jpg)
+![Behavior Assessment module schema](../schema-diagrams/Behavior-Assessment/Behavior_Assessment.jpg)
 ### Axioms
 #### Actor exhibits Behavior
 * Disjoint: `Actor DisjointWith Behavior` <br />
