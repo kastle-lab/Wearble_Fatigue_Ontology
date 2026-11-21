@@ -43,6 +43,7 @@ Anything that answers a SurveyItem must be a Response.
 * disjoint : `Actor DisjointWith Survey`
 
 * scoped domain: `takesSurvey some Survey subclassOf Actor` <br />
+Anything that takes a Survey must be an Actor.
 
 * Scoped range: `Actor subClassOf takesSurvey only Survey` <br />
 
@@ -60,6 +61,7 @@ Anything that answers a SurveyItem must be a Response.
 * disjoint: `Actor DisjointWith Wearable` <br />
 
 * scoped domain: `wears some Wearable SubClassOf Actor` <br />
+Anything that wears a Wearable must be an Actor.
 
 * scoped range: `Actor SubClassOf wears only Wearable` <br />
 
