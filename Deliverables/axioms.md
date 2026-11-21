@@ -10,6 +10,7 @@
 * disjoint: `Survey DisjointWith SurveyItem`
 
 * scoped domain: `hasItem some SurveyItem SubClassOf Survey` <br />
+Anything that has a SurveyItem must be a Survey
 
 * Scoped range: `Survey SubClassOf hasItem only SurveyItem` <br />
 
@@ -24,6 +25,7 @@
   Nothing can be Response and a Survey question.
   
 * Scoped domain: `answers some SurveyItem SubClassOf Response` <br />
+Anything that answers a SurveyItem must be a Response.
 
 * Scoped range: `Response SubClassOf answers only SurveyItem` <br />
 
@@ -72,7 +74,9 @@
 * disjoint: `Task  DisjointWith Equipment` <br />
   Nothing can be both a Task and a piece of Equipment.
 
+I THINK SO BUT DISCUSS
 * scoped domain: `requiresEquipment some Equipment SubClassOf Task` <br />
+Anything that requires Equipment must be a Task.
 
 * scoped range: `Task SubClassOf requiresEquipment only Equipment` <br />
   Anything a Task requires must be Equipment.
