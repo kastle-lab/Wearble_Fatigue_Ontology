@@ -7,7 +7,9 @@
 
 #### Survey hasItem SurveyItem <br />
 
+LETS DISCUSS THIS
 * disjoint: `Survey DisjointWith SurveyItem`
+Nothing can be a Survey and a SurveyItem.
 
 * scoped domain: `hasItem some SurveyItem SubClassOf Survey` <br />
 Anything that has a SurveyItem must be a Survey
