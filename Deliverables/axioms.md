@@ -27,7 +27,9 @@ Anything that has a SurveyItem must be a Survey
 * Scoped domain: `answers some SurveyItem SubClassOf Response` <br />
 Anything that answers a SurveyItem must be a Response.
 
+LETS DISCUSS THIS ONE
 * Scoped range: `Response SubClassOf answers only SurveyItem` <br />
+Any Response must answer a SurveyItem.
 
 * Existential: `Response SubclassOf answers some SurveyItem` <br />
 
@@ -45,7 +47,9 @@ Anything that answers a SurveyItem must be a Response.
 * scoped domain: `takesSurvey some Survey subclassOf Actor` <br />
 Anything that takes a Survey must be an Actor.
 
+LETS DISCUSS THIS
 * Scoped range: `Actor subClassOf takesSurvey only Survey` <br />
+Anything that an Actor takes must be a Survey.
 
 * Inverse Existential : `Survey SubClassOf Inverse answers some Actor` <br/>
 
@@ -64,6 +68,7 @@ Anything that takes a Survey must be an Actor.
 Anything that wears a Wearable must be an Actor.
 
 * scoped range: `Actor SubClassOf wears only Wearable` <br />
+Anything an actor wears but be a wearable.
 
 * Inverse Existential: `Wearable subClassOf inverse wears some Actor` <br />
 
