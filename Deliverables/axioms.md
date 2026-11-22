@@ -122,6 +122,9 @@ Anything that requires Equipment must be a Task.
 * Scoped range: `Platform SubClassOf hosts only Sensor` <br />
   Anything a sensor is located at must be a platform.
 
+* Functionality: Platform SubClassOf answers min 1 Sensor
+Each platform hosts min one sensor.
+
 
 ## Behavior Assessment
 ![Behavior Assessment module schema](../schema-diagrams/Behavior-Assessment/Behavior_Assessment.jpg)
@@ -330,6 +333,8 @@ Anything an obervation collection has as a member is an observation.
 * Existential: `ObservationCollection SubClassOf hasMember some Observation` <br />
 Every observation collection has at least one observation.
 
+* Functionality: ObservationCollection SubClassOf hasMember min 1 Observation
+Each observation collection has min one observation.
 
 
 ## Goal-Task
