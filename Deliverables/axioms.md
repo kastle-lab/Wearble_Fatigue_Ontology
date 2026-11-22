@@ -114,6 +114,15 @@ Anything that requires Equipment must be a Task.
 * Qualified Scoped Functionality: `Wearable SubClassOf isLocated min 1 Location` <br />
 
 
+#### Platform hosts Sensor
+
+* disjoint: `Platform DisjointWith Sensor` <br />
+  Nothing can be a platform and a sensor.
+  
+* Scoped range: `Platform SubClassOf hosts only Sensor` <br />
+  Anything a sensor is located at must be a platform.
+
+
 ## Behavior Assessment
 ![Behavior Assessment module schema](../schema-diagrams/Behavior-Assessment/Behavior_Assessment.jpg)
 ### Axioms
@@ -196,6 +205,40 @@ NEED TO DISCUSS
  Every interpretation is judged against at least one expectation.
 
 
+  #### Actor performsRole Role
+* Disjoint: `Actor DisjointWith Role` <br />
+  Nothing can be both an actor and a role.
+  
+* Scoped domain: `exhibits some Role SubClassOf Actor` <br />
+  Anything that performs a role must be an actor.
+  
+* Scoped range: `Actor SubClassOf exhibits only Role` <br />
+  Anything an actor performs must be a role.
+  
+* Structural tautology: `Actor SubClassOf exhibits min 0 Roles` <br />
+  An actor may exhibit zero or more roles.
+  
+* Inverse Qualified Scoped Functionality: `Role SubClassOf inverse exhibits min 1 Actor` <br />
+  Every role is performed by at least one actor.
+
+
+  #### Role sets Expectation
+* Disjoint: `Role DisjointWith Expectation` <br />
+  Nothing can be both a role and an expectation.
+  
+* Scoped domain: `sets some Expectation SubClassOf Role` <br />
+  Anything that sets an expectation must be a role.
+  
+* Scoped range: `Role SubClassOf sets only Expectation` <br />
+  Anything a role sets must be an expectation.
+  
+* Structural tautology: `Role SubClassOf sets min 0 Expectation` <br />
+  An role may exhibit zero or more expectations.
+  
+* Inverse Qualified Scoped Functionality: `Expectation SubClassOf inverse sets min 1 Role` <br />
+  Every expectaton is set by at least one role.
+
+
 ## Observation
 ![Observation module schema](../schema-diagrams/Observation/Observation.jpg)
 
@@ -262,7 +305,7 @@ NEED TO DISCUSS
 * Disjoint: `Observation DisjointWith ObservableProperty` <br />
 Nothing can be both an observation and an observable property.
 
-* Scoped Domain: `ObservedProperty some ObservableProperty SubClassOf Observation` <br />
+* Scoped Domain: `observedProperty some ObservableProperty SubClassOf Observation` <br />
 Anything that has an observed property must be an observation.
 
 * Scoped Range: `Observation SubClassOf observedProperty only ObservableProperty` <br/>
@@ -271,16 +314,28 @@ Anything an observation is about must be an observable property.
 * Existential: `Observation SubClassOf observedProperty some ObservableProperty` <br />
 Every observation has at least one observable property.
 
-* Qualified Scoped Functionality: `Observation SubClassOf observedProperty exactly 1 ObservableProperty` <br /> 
+
+#### ObservationCollection hasMember Observation
+
+DISCUSS THIS ONE
+* Disjoint: `Observation DisjointWith ObservationCollection` <br />
+Nothing can be both an observation and an observation collection
+
+* Scoped Domain: `hasMember some Observation SubClassOf ObservationCollection` <br />
+Anything that is a member of an observed property must be an observation.
+
+* Scoped Range: `ObservatioCollection SubClassOf hasMember only Observation` <br/>
+Anything an obervation collection has as a member is an observation.
+
+* Existential: `ObservationCollection SubClassOf hasMember some Observation` <br />
+Every observation collection has at least one observation.
+
 
 
 ## Goal-Task
 ![Goal-Task module schema](../Schema/Goal-Task.jpg)
 
 ### Axioms  
-
-
-
 
 
 #### Goal scopedBy Task
@@ -320,40 +375,6 @@ Every observation has at least one observable property.
   
 * Structural tautology: `Scenario SubClassOf providesRole min 0 Role` <br />
   A scenario may have zero or more roles.
-
-
-  #### Actor performsRole Role
-* Disjoint: `Actor DisjointWith Role` <br />
-  Nothing can be both an actor and a role.
-  
-* Scoped domain: `exhibits some Role SubClassOf Actor` <br />
-  Anything that performs a role must be an actor.
-  
-* Scoped range: `Actor SubClassOf exhibits only Role` <br />
-  Anything an actor performs must be a role.
-  
-* Structural tautology: `Actor SubClassOf exhibits min 0 Roles` <br />
-  An actor may exhibit zero or more roles.
-  
-* Inverse Qualified Scoped Functionality: `Role SubClassOf inverse exhibits min 1 Actor` <br />
-  Every role is performed by at least one actor.
-
-
-  #### Role sets Expectation
-* Disjoint: `Role DisjointWith Expectation` <br />
-  Nothing can be both a role and an expectation.
-  
-* Scoped domain: `sets some Expectation SubClassOf Role` <br />
-  Anything that sets an expectation must be a role.
-  
-* Scoped range: `Role SubClassOf sets only Expectation` <br />
-  Anything a role sets must be an expectation.
-  
-* Structural tautology: `Role SubClassOf sets min 0 Expectation` <br />
-  An role may exhibit zero or more expectations.
-  
-* Inverse Qualified Scoped Functionality: `Expectation SubClassOf inverse sets min 1 Role` <br />
-  Every expectaton is set by at least one role.
 
 
 ## Quantity
@@ -399,8 +420,6 @@ Every observation has at least one observable property.
 * Existential: ` QuantityValue SubClassOf hasUnit some Unit` <br />
 
 * Qualified Scoped Functionality: `QuantityValue SubClassOf hasUnit exactly 1 Unit` <br />
-
-
 
 
 ## Identifier
