@@ -7,7 +7,7 @@
 
 #### Survey hasItem SurveyItem <br />
 
-LETS DISCUSS THIS
+LETS DISCUSS THIS - SURVEY OF ONE ITEM?
 * disjoint: `Survey DisjointWith SurveyItem`
 Nothing can be a Survey and a SurveyItem.
 
@@ -15,6 +15,7 @@ Nothing can be a Survey and a SurveyItem.
 Anything that has a SurveyItem must be a Survey
 
 * Scoped range: `Survey SubClassOf hasItem only SurveyItem` <br />
+Any Survey must have a Survey Item.
 
 * Existential : `Survey SubClassOf hasItem some SurveyItem` <br/>
 
@@ -45,6 +46,7 @@ Any Response must answer a SurveyItem.
 #### Actor takesSurvey Survey <br />
 
 * disjoint : `Actor DisjointWith Survey`
+* Nothing can be both an Actor and a Survey
 
 * scoped domain: `takesSurvey some Survey subclassOf Actor` <br />
 Anything that takes a Survey must be an Actor.
@@ -56,7 +58,7 @@ Anything that an Actor takes must be a Survey.
 * Inverse Existential : `Survey SubClassOf Inverse answers some Actor` <br/>
 
 * Structural Tautology: `Actor subClassOf takesSurvey min 0 Survey` <br />
-  An Actor may take zero or more Survey.
+  An Actor may take zero or more Surveys.
 
 ## Instrumentation
 ![Instrumentation module schema](../schema-diagrams/Instrumentation/Instrumentation.jpg)
@@ -65,6 +67,7 @@ Anything that an Actor takes must be a Survey.
 #### Actor wears Wearable <br />
 
 * disjoint: `Actor DisjointWith Wearable` <br />
+Nothing can be both an Actor and a Wearable.
 
 * scoped domain: `wears some Wearable SubClassOf Actor` <br />
 Anything that wears a Wearable must be an Actor.
@@ -131,7 +134,8 @@ Anything that requires Equipment must be a Task.
 #### Observation informs Interpretation
 * Scoped domain: `informs some Interpretation SubClassOf Observation` <br />
   Anything that informs a behavior is an observation or an behavior or interpretation.
-  
+
+  I BELIEVE SO ...LETS DISCUSS
 * Scoped range: `Observation SubClassOf informs only Interpretation` <br />
   Anything an observation informs must be a behavior or an interpretation.
 
@@ -160,7 +164,10 @@ Anything that requires Equipment must be a Task.
 ![Observation module schema](../schema-diagrams/Observation/Observation.jpg)
 
 ### Axioms
+
+
 #### Agent madeObservation Observation
+
 * Disjoint: `Agent DisjointWith Observation` <br />
   Nothing can be both an agent and an observation.
   
@@ -176,9 +183,11 @@ Anything that requires Equipment must be a Task.
   An agent may make zero or more observations.
 
 #### Observation hasResult Result
+
 * Disjoint: `Observation DisjointWith Result` <br />
   Nothing can be both an observation and a result.
-  
+
+LETS DISCUSS THIS ONE.
 * Scoped Domain: `hasResult some Result SubClassOf Observation` <br/>
   Anything that has a result must be an observation.
   
@@ -207,18 +216,24 @@ Anything that requires Equipment must be a Task.
   Anything an observation is about must be a feature of interest.
   
 * Existential: `Observation SubClassOf hasFeatureOfInterest some FeatureOfInterest` <br />
-  Every observation is about at least one thing.
+  Every observation is about at least one feature of interest.
 
 * Qualified Scoped Functionality: `Observation SubClassOf hasFeatureOfInterest exactly 1 FeatureOfInterest` <br /> 
 
+
 #### Observation observedProperty ObservableProperty
+
 * Disjoint: `Observation DisjointWith ObservableProperty` <br />
+Nothing can be both an observation and an observable property.
 
 * Scoped Domain: `ObservedProperty some ObservableProperty SubClassOf Observation` <br />
+Anything that has an observed property must be an observation.
 
 * Scoped Range: `Observation SubClassOf observedProperty only ObservableProperty` <br/>
+Anything an observation is about must be an observable property.
 
 * Existential: `Observation SubClassOf observedProperty some ObservableProperty` <br />
+Every observation has at least one observable property.
 
 * Qualified Scoped Functionality: `Observation SubClassOf observedProperty exactly 1 ObservableProperty` <br /> 
 
@@ -237,8 +252,7 @@ Anything that requires Equipment must be a Task.
   Every goal has at least one task.
 * Structural tautology: `Goal SubClassOf scopedBy min 0 Task` <br />
   A goal may be scoped by zero or more tasks.
-* Qualified Scoped Funcationality: `Goal SubClassOf scopedBy min 1 Task` <br />
-  Goal has atleast one Task
+
 
 #### Scenario hasGoal Goal
 * Disjoint: `Scenario DisjointWith Goal` <br />
