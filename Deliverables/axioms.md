@@ -22,6 +22,7 @@ Any Survey must have a Survey Item.
 * Qualified Scoped Funcationality: `Survey SubClassOf hasItem min 1 SurveyItem` <br />
   Survey has atleast one SurveyItem
 
+
 #### Response answers SurveyItem <br />
 
 * disjoint: `Response DisjointWith SurveyItem` <br />
@@ -30,7 +31,6 @@ Any Survey must have a Survey Item.
 * Scoped domain: `answers some SurveyItem SubClassOf Response` <br />
 Anything that answers a SurveyItem must be a Response.
 
-LETS DISCUSS THIS ONE
 * Scoped range: `Response SubClassOf answers only SurveyItem` <br />
 Any Response must answer a SurveyItem.
 
@@ -43,6 +43,7 @@ Any Response must answer a SurveyItem.
   
 *Inverse Qualified Scoped Functionality: `SurveyItem SubClassOf inverse answers exactly 1 Response` <br /> 
 
+
 #### Actor takesSurvey Survey <br />
 
 * disjoint : `Actor DisjointWith Survey`
@@ -51,7 +52,6 @@ Any Response must answer a SurveyItem.
 * scoped domain: `takesSurvey some Survey subclassOf Actor` <br />
 Anything that takes a Survey must be an Actor.
 
-LETS DISCUSS THIS
 * Scoped range: `Actor subClassOf takesSurvey only Survey` <br />
 Anything that an Actor takes must be a Survey.
 
@@ -59,6 +59,7 @@ Anything that an Actor takes must be a Survey.
 
 * Structural Tautology: `Actor subClassOf takesSurvey min 0 Survey` <br />
   An Actor may take zero or more Surveys.
+
 
 ## Instrumentation
 ![Instrumentation module schema](../schema-diagrams/Instrumentation/Instrumentation.jpg)
@@ -86,7 +87,6 @@ Anything an actor wears but be a wearable.
 * disjoint: `Task  DisjointWith Equipment` <br />
   Nothing can be both a Task and a piece of Equipment.
 
-I THINK SO BUT DISCUSS
 * scoped domain: `requiresEquipment some Equipment SubClassOf Task` <br />
 Anything that requires Equipment must be a Task.
 
@@ -95,6 +95,7 @@ Anything that requires Equipment must be a Task.
 
 * Structural Tautology: `Task SubClassOf requiresEquipment min 0 Equipment` <br />
   A Task may require zero or more Equipment.
+
 
 #### Wearable isLocated Location
 
@@ -111,6 +112,7 @@ Anything that requires Equipment must be a Task.
   Every wearable is located at at least one body location.
   
 * Qualified Scoped Functionality: `Wearable SubClassOf isLocated min 1 Location` <br />
+
 
 ## Behavior Assessment
 ![Behavior Assessment module schema](../schema-diagrams/Behavior-Assessment/Behavior_Assessment.jpg)
@@ -130,6 +132,7 @@ Anything that requires Equipment must be a Task.
   
 * Inverse Qualified Scoped Functionality: `Behavior SubClassOf inverse exhibits min 1 Actor` <br />
   Every behavior is exhibited by at least one actor.
+
   
 #### Observation informs Interpretation
 NEED TO DISCUSS
@@ -146,6 +149,7 @@ NEED TO DISCUSS
 * Structural tautology: `Observation SubClassOf informs min 0 Interpretation`<br />
   An observation may inform zero or more behaviors.
 
+
 #### Behavior informs Interpretation
 NEED TO DISCUSS
 * Scoped domain: `informs some Interpretation SubClassOf Behavior` <br />
@@ -160,6 +164,7 @@ NEED TO DISCUSS
 * Structural tautology: `Behavior SubClassOf informs min 0 Interpretation`<br />
   A behavior may inform zero or more interpretations.
 
+
 #### Interpretation informs Behavior
 * Scoped domain: `informs some Behavior SubClassOf Interpretation` <br />
   Anything that informs a behavior is an interpretation.
@@ -172,6 +177,7 @@ NEED TO DISCUSS
   
 * Structural tautology: `Interpretation SubClassOf informs min 0 Behavior`<br />
   A behavior may inform zero or more interpretations.
+
 
 #### Expectation determines Interpretation
 * Disjoint: `Expectation DisjointWith Interpretation` <br/>
@@ -188,6 +194,7 @@ NEED TO DISCUSS
   
 * Inverse Existential: `Interpretation SubClassOf inverse determines some Expectation` <br />
  Every interpretation is judged against at least one expectation.
+
 
 ## Observation
 ![Observation module schema](../schema-diagrams/Observation/Observation.jpg)
@@ -211,12 +218,12 @@ NEED TO DISCUSS
 * Structural tautology: `Agent SubClassOf madeObservation min 0 Observation` <br />
   An agent may make zero or more observations.
 
+
 #### Observation hasResult Result
 
 * Disjoint: `Observation DisjointWith Result` <br />
   Nothing can be both an observation and a result.
 
-LETS DISCUSS THIS ONE.
 * Scoped Domain: `hasResult some Result SubClassOf Observation` <br/>
   Anything that has a result must be an observation.
   
@@ -266,13 +273,56 @@ Every observation has at least one observable property.
 
 * Qualified Scoped Functionality: `Observation SubClassOf observedProperty exactly 1 ObservableProperty` <br /> 
 
+
 ## Goal-Task
 ![Goal-Task module schema](../Schema/Goal-Task.jpg)
 
 ### Axioms  
 
 
-#### Actor performsRole Role
+
+
+
+#### Goal scopedBy Task
+* Disjoint: `Goal DisjointWith Task` <br />
+  Nothing can be both a task and a goal.
+  
+* Scoped domain: `scopedBy some Task SubClassOf Goal` <br />
+  Anything scoped by tasks must have a goal.
+  
+* Scoped range: `Goal SubClassOf scopedBy only Tasks` <br />
+  Any goal scope must be a task.
+  
+* Existential: `Goal SubClassOf scopedBy some Task` <br />
+  Every goal has at least one task.
+  
+* Structural tautology: `Goal SubClassOf scopedBy min 0 Task` <br />
+  A goal may be scoped by zero or more tasks.
+
+
+#### Scenario hasGoal Goal
+* Disjoint: `Scenario DisjointWith Goal` <br />
+  Nothing can be both a scenario and a goal.
+  
+* Scoped domain: `hasGoal some Goal SubClassOf Scenario` <br />
+  Anything that has a goal must have a scenario.
+  
+* Structural tautology: `Scenario SubClassOf scopedBy min 0 Goal` <br />
+  A scenario may have zero or more goals. 
+
+  
+#### Scenario providesRole Role
+* Disjoint: `Scenario DisjointWith Role` <br />
+  Nothing can be both a scenario and a role.
+  
+* Scoped domain: `providesRole some Role SubClassOf Scenario` <br />
+  Anything that has a role must have a scenario.
+  
+* Structural tautology: `Scenario SubClassOf providesRole min 0 Role` <br />
+  A scenario may have zero or more roles.
+
+
+  #### Actor performsRole Role
 * Disjoint: `Actor DisjointWith Role` <br />
   Nothing can be both an actor and a role.
   
@@ -288,34 +338,23 @@ Every observation has at least one observable property.
 * Inverse Qualified Scoped Functionality: `Role SubClassOf inverse exhibits min 1 Actor` <br />
   Every role is performed by at least one actor.
 
-#### Goal scopedBy Task
-* Disjoint: `Goal DisjointWith Task` <br />
-  Nothing can be both a task and a goal.
-* Scoped domain: `scopedBy some Task SubClassOf Goal` <br />
-  Anything scoped by tasks must have a goal.
-* Scoped range: `Goal SubClassOf scopedBy only Tasks` <br />
-  Any goal scope must be a task.
-* Existential: `Goal SubClassOf scopedBy some Task` <br />
-  Every goal has at least one task.
-* Structural tautology: `Goal SubClassOf scopedBy min 0 Task` <br />
-  A goal may be scoped by zero or more tasks.
 
-
-#### Scenario hasGoal Goal
-* Disjoint: `Scenario DisjointWith Goal` <br />
-  Nothing can be both a scenario and a goal.
-* Scoped domain: `hasGoal some Goal SubClassOf Scenario` <br />
-  Anything that has a goal must have a scenario.
-* Structural tautology: `Scenario SubClassOf scopedBy min 0 Goal` <br />
-  A scenario may have zero or more goals. 
+  #### Role sets Expectation
+* Disjoint: `Role DisjointWith Expectation` <br />
+  Nothing can be both a role and an expectation.
   
-#### Scenario providesRole Role
-* Disjoint: `Scenario DisjointWith Role` <br />
-  Nothing can be both a scenario and a role.
-* Scoped domain: `providesRole some Role SubClassOf Scenario` <br />
-  Anything that has a role must have a scenario.
-* Structural tautology: `Scenario SubClassOf providesRole min 0 Role` <br />
-  A scenario may have zero or more roles.
+* Scoped domain: `sets some Expectation SubClassOf Role` <br />
+  Anything that sets an expectation must be a role.
+  
+* Scoped range: `Role SubClassOf sets only Expectation` <br />
+  Anything a role sets must be an expectation.
+  
+* Structural tautology: `Role SubClassOf sets min 0 Expectation` <br />
+  An role may exhibit zero or more expectations.
+  
+* Inverse Qualified Scoped Functionality: `Expectation SubClassOf inverse sets min 1 Role` <br />
+  Every expectaton is set by at least one role.
+
 
 ## Quantity
 ![QUDT module schema](../schema-diagrams/Quantity/Quantity.jpg)
@@ -330,6 +369,7 @@ Every observation has at least one observable property.
 * Existential: `Quantity SubClassOf hasQuantityValue some QuantityValue` <br />
 
 * Qualified Scoped Functionality: `Quantity SubClassOf hasQuantityValue exactly 1 QuantityValue` <br />
+
 
 #### Quantity hasQuantityKind QuantityKind
 * Disjoint: `Quantity DisjointWith QuantityKind` <br />
@@ -347,6 +387,7 @@ Every observation has at least one observable property.
 *  Qualified Scoped Functionality: `Quantity SubClassOf hasQuantityKind exactly 1 QuantityKind` <br />
   Every quantity has exactly one kind
 
+
 #### QuantityValue hasUnit Unit
 
 * Disjoint : `QuantityValue DisjointWith Unit` <br />
@@ -363,7 +404,7 @@ Every observation has at least one observable property.
 
 
 ## Identifier
-![QUDT module schema](../schema-diagrams/Quantity/Quantity.jpg)
+
 ### Axioms
 #### Agent hasIdentifier Identifier
 * Disjoint: `Quantity DisjointWith Identifier` <br />
@@ -375,6 +416,7 @@ Every observation has at least one observable property.
 * Existential: `Agent SubClassOf hasIdentifier some Identifier` <br />
 
 * Qualified Scoped Functionality: `Agent SubClassOf hasIdentifier exactly 1 Identifier` <br />
+
 
 #### Identifier hasIdentifierType IDType
 * Disjoint: `Identifier DisjointWith IDType` <br />
@@ -395,4 +437,34 @@ Every observation has at least one observable property.
 
 
 
+## DataTransformation
 
+### Axioms
+#### Agent hasIdentifier Identifier
+* Disjoint: `Quantity DisjointWith Identifier` <br />
+
+* Scoped Domain: `hasIdentifier some Identifier SubClassOf Agent` <br />
+
+* Scoped Range: `Agent subClassOf hasIdentifier only Identifier` <br />
+
+* Existential: `Agent SubClassOf hasIdentifier some Identifier` <br />
+
+* Qualified Scoped Functionality: `Agent SubClassOf hasIdentifier exactly 1 Identifier` <br />
+
+
+#### Result hasIdentifierType DataType
+* Disjoint: `Result DisjointWith DataType` <br />
+  Nothing can be both a DataType and a Result.
+
+  SHOULD PROBABLY DELETE THIS ONE
+* Scoped domain: `hasDataType some DataType SubClassOf Result` <br />
+  Anything that has a DataType must be a Result.
+  
+* Scoped range: `Result SubClassOf hasDataType only DataType` <br />
+  Anything a Result has as its type must be a DataType.
+  
+* Existential: `Result SubClassOf hasDataType some DataType` <br />
+  Every Result has a type.
+
+*  Qualified Scoped Functionality: `Result SubClassOf hasDataType exactly 1 DataType` <br />
+  Every Result has exactly one type
