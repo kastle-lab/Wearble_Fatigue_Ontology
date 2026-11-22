@@ -132,17 +132,46 @@ Anything that requires Equipment must be a Task.
   Every behavior is exhibited by at least one actor.
   
 #### Observation informs Interpretation
+NEED TO DISCUSS
 * Scoped domain: `informs some Interpretation SubClassOf Observation` <br />
-  Anything that informs a behavior is an observation or an behavior or interpretation.
+  Anything that informs a interpretation is an observation or a behavior.
 
   I BELIEVE SO ...LETS DISCUSS
 * Scoped range: `Observation SubClassOf informs only Interpretation` <br />
   Anything an observation informs must be a behavior or an interpretation.
 
 * Inverse Qualified Scoped Functionality: `Interpretation SubClassOf inverse informs min 1 Observation` <br />
+  Every interpretation is informed by zero or more observations.
   
-* Structural tautology: `Observation SubClassOf informs min 0 Behavior`<br />
+* Structural tautology: `Observation SubClassOf informs min 0 Interpretation`<br />
   An observation may inform zero or more behaviors.
+
+#### Behavior informs Interpretation
+NEED TO DISCUSS
+* Scoped domain: `informs some Interpretation SubClassOf Behavior` <br />
+  Anything that informs an interpretation is a behavior or an observation.
+  
+* Scoped range: `Behavior SubClassOf informs only Interpretation` <br />
+  Anything a behavior informs must be an interpretation.
+
+* Inverse Qualified Scoped Functionality: `Interpretation SubClassOf inverse informs min 1 Behavior` <br />
+  Every interpretation is informed by zero or more behaviors.
+  
+* Structural tautology: `Behavior SubClassOf informs min 0 Interpretation`<br />
+  A behavior may inform zero or more interpretations.
+
+#### Interpretation informs Behavior
+* Scoped domain: `informs some Behavior SubClassOf Interpretation` <br />
+  Anything that informs a behavior is an interpretation.
+
+* Scoped range: `Interpretation SubClassOf informs only Behavior` <br />
+  Anything an interpretation informs must be a behavior.
+
+* Inverse Qualified Scoped Functionality: `Behavior SubClassOf inverse informs min 1 Interpretation` <br />
+  Every behavior is informed by zero or more interpretations.
+  
+* Structural tautology: `Interpretation SubClassOf informs min 0 Behavior`<br />
+  A behavior may inform zero or more interpretations.
 
 #### Expectation determines Interpretation
 * Disjoint: `Expectation DisjointWith Interpretation` <br/>
@@ -241,6 +270,24 @@ Every observation has at least one observable property.
 ![Goal-Task module schema](../Schema/Goal-Task.jpg)
 
 ### Axioms  
+
+
+#### Actor performsRole Role
+* Disjoint: `Actor DisjointWith Role` <br />
+  Nothing can be both an actor and a role.
+  
+* Scoped domain: `exhibits some Role SubClassOf Actor` <br />
+  Anything that performs a role must be an actor.
+  
+* Scoped range: `Actor SubClassOf exhibits only Role` <br />
+  Anything an actor performs must be a role.
+  
+* Structural tautology: `Actor SubClassOf exhibits min 0 Roles` <br />
+  An actor may exhibit zero or more roles.
+  
+* Inverse Qualified Scoped Functionality: `Role SubClassOf inverse exhibits min 1 Actor` <br />
+  Every role is performed by at least one actor.
+
 #### Goal scopedBy Task
 * Disjoint: `Goal DisjointWith Task` <br />
   Nothing can be both a task and a goal.
