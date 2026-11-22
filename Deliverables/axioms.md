@@ -361,3 +361,38 @@ Every observation has at least one observable property.
 
 
 
+
+## Identifier
+![QUDT module schema](../schema-diagrams/Quantity/Quantity.jpg)
+### Axioms
+#### Agent hasIdentifier Identifier
+* Disjoint: `Quantity DisjointWith Identifier` <br />
+
+* Scoped Domain: `hasIdentifier some Identifier SubClassOf Agent` <br />
+
+* Scoped Range: `Agent subClassOf hasIdentifier only Identifier` <br />
+
+* Existential: `Agent SubClassOf hasIdentifier some Identifier` <br />
+
+* Qualified Scoped Functionality: `Agent SubClassOf hasIdentifier exactly 1 Identifier` <br />
+
+#### Identifier hasIdentifierType IDType
+* Disjoint: `Identifier DisjointWith IDType` <br />
+  Nothing can be both an identifier type and an identifier.
+  
+* Scoped domain: `hasIdentifierType some IDType SubClassOf Identifier` <br />
+  Anything that has an identifier type must be an identifier.
+  
+* Scoped range: `Identifier SubClassOf hasIdentifierType only IDType` <br />
+  Anything an identifier has as its type must be a identifier type.
+  
+* Existential: `Identifier SubClassOf hasIdentifierType some IDType` <br />
+  Every identifer has a type.
+
+*  Qualified Scoped Functionality: `Identifier SubClassOf hasIdentifierType exactly 1 IDType` <br />
+  Every identifier has exactly one type
+
+
+
+
+
