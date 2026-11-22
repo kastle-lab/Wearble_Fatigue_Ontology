@@ -257,7 +257,8 @@ Anything that requires Equipment must be a Task.
   A scenario may have zero or more roles.
 
 ## Quantity
-###
+![QUDT module schema](../schema-diagrams/Quantity/Quantity.jpg)
+### Axioms
 #### Quantity hasQuantityValue QuantityValue
 * Disjoint: `Quantity DisjointWith QuantityValue` <br />
 
