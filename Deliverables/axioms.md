@@ -256,5 +256,46 @@ Anything that requires Equipment must be a Task.
 * Structural tautology: `Scenario SubClassOf providesRole min 0 Role` <br />
   A scenario may have zero or more roles.
 
+## Quantity
+###
+#### Quantity hasQuantityValue QuantityValue
+* Disjoint: `Quantity DisjointWith QuantityValue` <br />
+
+* Scoped Domain: `hasQuantityValue some QuantityValue SubClassOf Quantity` <br />
+
+* Scoped Range: `Quantity subClassOf hasQuantityValue only QuantityValue` <br />
+
+* Existential: `Quantity SubClassOf hasQuantityValue some QuantityValue` <br />
+
+* Qualified Scoped Functionality: `Quantity SubClassOf hasQuantityValue exactly 1 QuantityValue` <br />
+
+#### Quantity hasQuantityKind QuantityKind
+* Disjoint: `Quantity DisjointWith QuantityKind` <br />
+  Nothing can be both a measured amount and a kind of quantity.
   
+* Scoped domain: `hasQuantityKind some QuantityKind SubClassOf Quantity` <br />
+  Anything that has a quantity kind must be a quantity.
+  
+* Scoped range: `Quantity SubClassOf hasQuantityKind only QuantityKind` <br />
+  Anything a quantity has as its kind must be a quantity kind.
+  
+* Existential: `Quantity SubClassOf hasQuantityKind some QuantityKind` <br />
+  Every quantity has a kind.
+
+*  Qualified Scoped Functionality: `Quantity SubClassOf hasQuantityKind exactly 1 QuantityKind` <br />
+  Every quantity has exactly one kind
+
+#### QuantityValue hasUnit Unit
+
+* Disjoint : `QuantityValue DisjointWith Unit` <br />
+
+* Scoped Domain: `hasUnit some Unit SubClassOf QuantityValue` <br />
+
+* Scoped Range: `QuantityValue SubClassOf hasUnit only Unit` <br />
+
+* Existential: ` QuantityValue SubClassOf hasUnit some Unit` <br />
+
+* Qualified Scoped Functionality: `QuantityValue SubClassOf hasUnit exactly 1 Unit` <br />
+
+
 
