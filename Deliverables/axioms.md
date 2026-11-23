@@ -282,6 +282,20 @@ NEED TO DISCUSS
 
 * Inverse Qualified Scoped Functionality: `Result SubClassOf inverse hasResult exactly 1 Observation` <br />
 
+#### Observation hasTemporalExtent TemporalExtent
+
+* Disjoint: `Observation DisjointWith TemporalExtent` <br />
+* Scoped Domain: `hasTemporalExtent some TemporalExtent SubClassOf Observation` <br/>
+* Scoped Range: `Observation SubClassOf hasTemporalExtent only TemporalExtent` <br />
+* Existential: ` Observation SubClassOf hasTemporalExtent some TemporalExtent` <br />
+* Qualified Scoped Functionality: `Observation SubClassOf hasTemporalExtent exactly 1 TemporalExtent` <br />
+
+
+
+
+
+
+
   
 #### Observation hasFeatureOfInterest FeatureOfInterest
 
@@ -330,6 +344,8 @@ Every observation collection has at least one observation.
 
 * Functionality: `ObservationCollection SubClassOf hasMember min 1 Observation` <br />
 Each observation collection has min one observation.
+
+
 
 
 ## Goal-Task
