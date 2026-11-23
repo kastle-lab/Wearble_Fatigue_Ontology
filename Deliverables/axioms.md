@@ -184,7 +184,7 @@ NEED TO DISCUSS
 * Inverse Qualified Scoped Functionality: `Behavior SubClassOf inverse informs min 1 Interpretation` <br />
   Every behavior is informed by at least one interpretations.
   
-* Functionality: Interpretation SubClassOf informs min 1 Behavior
+* Functionality: `Interpretation SubClassOf informs min 1 Behavior` <br />
   Each interpretation informs min one behavior.
 
 
@@ -215,7 +215,7 @@ NEED TO DISCUSS
 * Scoped range: `Actor SubClassOf exhibits only Role` <br />
   Anything an actor performs must be a role.
   
-* Structural tautology: `Actor SubClassOf exhibits min 0 Roles` <br />
+* Structural tautology: `Actor SubClassOf exhibits min 0 Role` <br />
   An actor may exhibit zero or more roles.
   
 * Inverse Qualified Scoped Functionality: `Role SubClassOf inverse exhibits min 1 Actor` <br />
@@ -322,13 +322,13 @@ Nothing can be both an observation and an observation collection
 * Scoped Domain: `hasMember some Observation SubClassOf ObservationCollection` <br />
 Anything that is a member of an observed property must be an observation.
 
-* Scoped Range: `ObservatioCollection SubClassOf hasMember only Observation` <br/>
+* Scoped Range: `ObservationCollection SubClassOf hasMember only Observation` <br/>
 Anything an obervation collection has as a member is an observation.
 
 * Existential: `ObservationCollection SubClassOf hasMember some Observation` <br />
 Every observation collection has at least one observation.
 
-* Functionality: ObservationCollection SubClassOf hasMember min 1 Observation
+* Functionality: `ObservationCollection SubClassOf hasMember min 1 Observation` <br />
 Each observation collection has min one observation.
 
 
@@ -345,7 +345,7 @@ Each observation collection has min one observation.
 * Scoped domain: `scopedBy some Task SubClassOf Goal` <br />
   Anything scoped by tasks must have a goal.
   
-* Scoped range: `Goal SubClassOf scopedBy only Tasks` <br />
+* Scoped range: `Goal SubClassOf scopedBy only Task` <br />
   Any goal scope must be a task.
   
 * Existential: `Goal SubClassOf scopedBy some Task` <br />
@@ -460,7 +460,7 @@ Each observation collection has min one observation.
 
 ### Axioms
 #### Agent hasIdentifier Identifier
-* Disjoint: `Quantity DisjointWith Identifier` <br />
+* Disjoint: `Agent DisjointWith Identifier` <br />
 
 * Scoped Domain: `hasIdentifier some Identifier SubClassOf Agent` <br />
 
@@ -471,7 +471,7 @@ Each observation collection has min one observation.
 * Qualified Scoped Functionality: `Agent SubClassOf hasIdentifier exactly 1 Identifier` <br />
 
 
-#### Result hasIdentifierType DataType
+#### Result hasDataType DataType
 * Disjoint: `Result DisjointWith DataType` <br />
   Nothing can be both a DataType and a Result.
   
@@ -483,3 +483,14 @@ Each observation collection has min one observation.
 
 *  Qualified Scoped Functionality: `Result SubClassOf hasDataType exactly 1 DataType` <br />
   Every Result has exactly one type
+
+#### Result participatesInDataTransformation DataTransformation
+* Disjoint: `Result DisjointWith DataTransformation` <br />
+
+* Scoped Domain: `participatesInDataTransformation some DataTransformation SubClassOf Result` <br />
+
+* Scoped range: `Result SubClassOf participatesInDataTransformation only DataTransformation` <br />
+
+* Structual Tautology: ``Result SubClassOf participatesInDataTransformation min 0 DataTransformation` <br />
+
+* Inverse Qualified Scoped Functionality: `DataTransformation SubClassOf inverse participatesInDataTransformation exactly 1 Result` <br />
