@@ -122,7 +122,7 @@ Anything that requires Equipment must be a Task.
 * Scoped range: `Platform SubClassOf hosts only Sensor` <br />
   Anything a sensor is located at must be a platform.
 
-* Functionality: Platform SubClassOf answers min 1 Sensor
+* Functionality: Platform SubClassOf hosts min 1 Sensor
 Each platform hosts a minimum of one sensor.
 
 
@@ -151,7 +151,6 @@ NEED TO DISCUSS
 * Scoped domain: `informs some Interpretation SubClassOf Observation` <br />
   Anything that informs a interpretation is an observation or a behavior.
 
-  I BELIEVE SO ...LETS DISCUSS
 * Scoped range: `Observation SubClassOf informs only Interpretation` <br />
   Anything an observation informs must be a behavior or an interpretation.
 
@@ -173,8 +172,8 @@ NEED TO DISCUSS
 * Inverse Qualified Scoped Functionality: `Interpretation SubClassOf inverse informs min 1 Behavior` <br />
   Every interpretation is informed by atleast one behavior.
   
-* Structural tautology: `Behavior SubClassOf informs min 0 Interpretation`<br />
-  A behavior may inform zero or more interpretations.
+* Functionality: Behavior SubClassOf informs min 1 Interpretation
+  Each behavior informs min one interpretation.
 
 
 #### Interpretation informs Behavior
@@ -187,8 +186,8 @@ NEED TO DISCUSS
 * Inverse Qualified Scoped Functionality: `Behavior SubClassOf inverse informs min 1 Interpretation` <br />
   Every behavior is informed by at least one interpretations.
   
-* Structural tautology: `Interpretation SubClassOf informs min 0 Behavior`<br />
-  A behavior may inform zero or more interpretations.
+* Functionality: Interpretation SubClassOf informs min 1 Behavior
+  Each interpretation informs min one behavior.
 
 
 #### Expectation determines Interpretation
