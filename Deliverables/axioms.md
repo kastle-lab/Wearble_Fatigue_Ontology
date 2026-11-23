@@ -47,7 +47,7 @@ Any Response must answer a SurveyItem.
 #### Actor takesSurvey Survey <br />
 
 * disjoint : `Actor DisjointWith Survey`
-* Nothing can be both an Actor and a Survey
+Nothing can be both an Actor and a Survey
 
 * scoped domain: `takesSurvey some Survey subclassOf Actor` <br />
 Anything that takes a Survey must be an Actor.
@@ -123,7 +123,7 @@ Anything that requires Equipment must be a Task.
   Anything a sensor is located at must be a platform.
 
 * Functionality: Platform SubClassOf answers min 1 Sensor
-Each platform hosts min one sensor.
+Each platform hosts a minimum of one sensor.
 
 
 ## Behavior Assessment
@@ -156,10 +156,10 @@ NEED TO DISCUSS
   Anything an observation informs must be a behavior or an interpretation.
 
 * Inverse Qualified Scoped Functionality: `Interpretation SubClassOf inverse informs min 1 Observation` <br />
-  Every interpretation is informed by zero or more observations.
+  Every interpretation is informed by at least one observation.
   
 * Structural tautology: `Observation SubClassOf informs min 0 Interpretation`<br />
-  An observation may inform zero or more behaviors.
+  An observation may inform zero or more interpretations.
 
 
 #### Behavior informs Interpretation
@@ -171,7 +171,7 @@ NEED TO DISCUSS
   Anything a behavior informs must be an interpretation.
 
 * Inverse Qualified Scoped Functionality: `Interpretation SubClassOf inverse informs min 1 Behavior` <br />
-  Every interpretation is informed by zero or more behaviors.
+  Every interpretation is informed by atleast one behavior.
   
 * Structural tautology: `Behavior SubClassOf informs min 0 Interpretation`<br />
   A behavior may inform zero or more interpretations.
@@ -185,7 +185,7 @@ NEED TO DISCUSS
   Anything an interpretation informs must be a behavior.
 
 * Inverse Qualified Scoped Functionality: `Behavior SubClassOf inverse informs min 1 Interpretation` <br />
-  Every behavior is informed by zero or more interpretations.
+  Every behavior is informed by at least one interpretations.
   
 * Structural tautology: `Interpretation SubClassOf informs min 0 Behavior`<br />
   A behavior may inform zero or more interpretations.
