@@ -6,8 +6,6 @@
 ### Axioms
 
 #### Survey hasItem SurveyItem <br />
-
-LETS DISCUSS THIS - SURVEY OF ONE ITEM?
 * disjoint: `Survey DisjointWith SurveyItem`
 Nothing can be a Survey and a SurveyItem.
 
@@ -318,8 +316,6 @@ Every observation has at least one observable property.
 
 
 #### ObservationCollection hasMember Observation
-
-DISCUSS THIS ONE
 * Disjoint: `Observation DisjointWith ObservationCollection` <br />
 Nothing can be both an observation and an observation collection
 
