@@ -474,10 +474,6 @@ Each observation collection has min one observation.
 #### Result hasIdentifierType DataType
 * Disjoint: `Result DisjointWith DataType` <br />
   Nothing can be both a DataType and a Result.
-
-  SHOULD PROBABLY DELETE THIS ONE
-* Scoped domain: `hasDataType some DataType SubClassOf Result` <br />
-  Anything that has a DataType must be a Result.
   
 * Scoped range: `Result SubClassOf hasDataType only DataType` <br />
   Anything a Result has as its type must be a DataType.
