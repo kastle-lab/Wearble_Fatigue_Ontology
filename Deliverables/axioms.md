@@ -39,7 +39,7 @@ Any Response must answer a SurveyItem.
 * Functionality: `Response SubClassOf answers min 1 SurveyItem` <br />
   Each response answers min one Survey question.
   
-*Inverse Qualified Scoped Functionality: `SurveyItem SubClassOf inverse answers exactly 1 Response` <br /> 
+* Inverse Qualified Scoped Functionality: `SurveyItem SubClassOf inverse answers exactly 1 Response` <br /> 
 
 
 #### Actor takesSurvey Survey <br />
@@ -120,7 +120,7 @@ Anything that requires Equipment must be a Task.
 * Scoped range: `Platform SubClassOf hosts only Sensor` <br />
   Anything a sensor is located at must be a platform.
 
-* Functionality: Platform SubClassOf hosts min 1 Sensor
+* Functionality: `Platform SubClassOf hosts min 1 Sensor` <br />
 Each platform hosts a minimum of one sensor.
 
 
@@ -170,7 +170,7 @@ NEED TO DISCUSS
 * Inverse Qualified Scoped Functionality: `Interpretation SubClassOf inverse informs min 1 Behavior` <br />
   Every interpretation is informed by atleast one behavior.
   
-* Functionality: Behavior SubClassOf informs min 1 Interpretation
+* Functionality: `Behavior SubClassOf informs min 1 Interpretation` <br />
   Each behavior informs min one interpretation.
 
 
@@ -244,7 +244,6 @@ NEED TO DISCUSS
 
 ### Axioms
 
-
 #### Agent madeObservation Observation
 
 * Disjoint: `Agent DisjointWith Observation` <br />
@@ -289,10 +288,6 @@ NEED TO DISCUSS
 * Scoped Range: `Observation SubClassOf hasTemporalExtent only TemporalExtent` <br />
 * Existential: ` Observation SubClassOf hasTemporalExtent some TemporalExtent` <br />
 * Qualified Scoped Functionality: `Observation SubClassOf hasTemporalExtent exactly 1 TemporalExtent` <br />
-
-
-
-
 
 
 
@@ -347,9 +342,8 @@ Each observation collection has min one observation.
 
 
 
-
 ## Goal-Task
-![Goal-Task module schema](../Schema/Goal-Task.jpg)
+![Goal-Task module schema](../schema-diagrams/Goal-Task/Goal-Task.jpg)
 
 ### Axioms  
 
@@ -439,7 +433,7 @@ Each observation collection has min one observation.
 
 
 ## Identifier
-
+![QUDT module schema](../schema-diagrams/Identifier/Identifier.jpg)
 ### Axioms
 #### Agent hasIdentifier Identifier
 * Disjoint: `Quantity DisjointWith Identifier` <br />
