@@ -53,7 +53,7 @@ Anything that takes a Survey must be an Actor.
 * Scoped range: `Actor subClassOf takesSurvey only Survey` <br />
 Anything that an Actor takes must be a Survey.
 
-* Inverse Existential : `Survey SubClassOf Inverse answers some Actor` <br/>
+* Inverse Existential : `Survey SubClassOf Inverse takesSurvey some Actor` <br/>
 
 * Structural Tautology: `Actor subClassOf takesSurvey min 0 Survey` <br />
   An Actor may take zero or more Surveys.
@@ -284,12 +284,9 @@ NEED TO DISCUSS
 #### Observation hasTemporalExtent TemporalExtent
 
 * Disjoint: `Observation DisjointWith TemporalExtent` <br />
-* Scoped Domain: `hasTemporalExtent some TemporalExtent SubClassOf Observation` <br/>
 * Scoped Range: `Observation SubClassOf hasTemporalExtent only TemporalExtent` <br />
 * Existential: ` Observation SubClassOf hasTemporalExtent some TemporalExtent` <br />
 * Qualified Scoped Functionality: `Observation SubClassOf hasTemporalExtent exactly 1 TemporalExtent` <br />
-
-
 
   
 #### Observation hasFeatureOfInterest FeatureOfInterest
