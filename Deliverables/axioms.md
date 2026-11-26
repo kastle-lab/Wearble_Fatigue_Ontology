@@ -6,7 +6,7 @@
 ### Axioms
 
 #### Survey hasItem SurveyItem <br />
-* disjoint: `Survey DisjointWith SurveyItem`
+* disjoint: `Survey DisjointWith SurveyItem` <br />
 Nothing can be a Survey and a SurveyItem.
 
 * scoped domain: `hasItem some SurveyItem SubClassOf Survey` <br />
@@ -44,7 +44,7 @@ Any Response must answer a SurveyItem.
 
 #### Actor takesSurvey Survey <br />
 
-* disjoint : `Actor DisjointWith Survey`
+* disjoint : `Actor DisjointWith Survey` <br />
 Nothing can be both an Actor and a Survey
 
 * scoped domain: `takesSurvey some Survey subclassOf Actor` <br />
@@ -465,21 +465,28 @@ Each observation collection has min one observation.
 
 
 
-
 ## DataTransformation
 
 ### Axioms
-#### Agent hasIdentifier Identifier
-* Disjoint: `Agent DisjointWith Identifier` <br />
 
-* Scoped Domain: `hasIdentifier some Identifier SubClassOf Agent` <br />
+### Result hasQuantity Quantity
 
-* Scoped Range: `Agent subClassOf hasIdentifier only Identifier` <br />
+* Scoped domain: `hasQuantity some Quantity SubClassOf Result` <br />
+Anything that has a quantity must be a result.
 
-* Existential: `Agent SubClassOf hasIdentifier some Identifier` <br />
+* Scoped range: `Result SubClassOf hasQuantity only Quantity` <br />
 
-* Qualified Scoped Functionality: `Agent SubClassOf hasIdentifier exactly 1 Identifier` <br />
-
+* Existential: `Result SubClassOf hasQuantity some Quantity` <br />
+  Every result has a quantity.
+  
+* Qualified scoped functionality: `Result SubClassOf hasQuantity max 1 Quantity` <br />
+  A result has at most one quantity.
+  
+* Inverse existential: `Quantity SubClassOf inverse hasQuantity some Result` <br /> 
+  Every quantity belongs to a result.
+  
+* Inverse qualified scoped functionality: `Quantity SubClassOf inverse hasQuantity max 1 Result` <br />
+  A quantity belongs to only one result.
 
 #### Result hasDataType DataType
 * Disjoint: `Result DisjointWith DataType` <br />
@@ -501,6 +508,6 @@ Each observation collection has min one observation.
 
 * Scoped range: `Result SubClassOf participatesInDataTransformation only DataTransformation` <br />
 
-* Structual Tautology: ``Result SubClassOf participatesInDataTransformation min 0 DataTransformation` <br />
+* Structual Tautology: `Result SubClassOf participatesInDataTransformation min 0 DataTransformation` <br />
 
 * Inverse Qualified Scoped Functionality: `DataTransformation SubClassOf inverse participatesInDataTransformation exactly 1 Result` <br />
